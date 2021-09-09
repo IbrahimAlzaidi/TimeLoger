@@ -16,7 +16,7 @@ class MyBroadCast: BroadcastReceiver() {
             Intent.ACTION_AIRPLANE_MODE_CHANGED -> {
                 if (p1.extras?.getBoolean("state") == true){
                     addTime()
-                    Toast.makeText(p0,"Hello from Boot",Toast.LENGTH_LONG).show()
+                    Toast.makeText(p0,"Hello from AIRPLANE",Toast.LENGTH_LONG).show()
                     Log.i("AAA", SimpleDateFormat("yyyy/MM/dd HH:mm").format(Date()))
                     dbHelper.getAllRecords()
                 }
